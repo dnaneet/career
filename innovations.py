@@ -4,6 +4,11 @@ import numpy as np
 import plotly.graph_objects as go
 
 
+st.set_page_config(
+     page_title='Streamlit cheat sheet',
+     layout="wide"
+)
+
 
 
 df = pd.read_csv('innovations-timeline-2.csv')
@@ -31,7 +36,7 @@ fig1 = go.Figure(data=[go.Table(
 ])
 
 
-fig1.update_layout(width=900, height=500)
+fig1.update_layout(width=1100, height=350)
 st.plotly_chart(fig1)
 
 st.title('Nomination for Instructional Awards')
@@ -55,6 +60,7 @@ fig2 = go.Figure(data=[go.Table(
             fill_color='lavender',
             align='left'))
 ])
+fig1.update_layout(width=900, height=500)
 st.plotly_chart(fig2)
 
 st.markdown("###### Created with Python by Aneet Narendranath, PhD, dnaneet@mtu.edu")
