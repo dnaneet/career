@@ -63,4 +63,7 @@ fig2 = go.Figure(data=[go.Table(
 fig1.update_layout(width=900, height=500)
 st.plotly_chart(fig2)
 
-st.markdown("###### Created with Python by Aneet Narendranath, PhD, dnaneet@mtu.edu")
+st.markdown("###### Created with Python by Aneet Narendranath, PhD")
+st.markdown('[dnaneet@mtu.edu](dnaneet@mtu.edu) | [LinkedIn](https://www.linkedin.com/in/dnaneet/) | [Google Scholar](https://scholar.google.com/citations?hl=en&user=uSSO_eAAAAAJ&view_op=list_works&authuser=1&sortby=pubdate)')
+st.markdown('[Short lecture on the Convergence, Iteration with help from my GTA](https://youtu.be/VZeUe9ZjWb8)')
+st.markdown('[Short lecture on the importance of computational thinking](https://youtu.be/y0EJsWmNvFU)')
