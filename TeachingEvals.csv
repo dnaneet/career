@@ -1,4 +1,4 @@
-Course,Course Number,Semester,Year,Enrollment,Responded,Eval Score
+Course,Course Number,Semester,Year,Enrollment,Responded,Eval Score out of 5.0
 Mechanics of Materials,2150,Fall,2016,80,Data not available,3.84
 Mechanics of Materials,2150,Spring,2017,87,51,4.06
 Intro to FEM,4405,Fall,2017,44,24,4.47
