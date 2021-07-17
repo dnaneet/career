@@ -184,7 +184,7 @@ if selection == "Teaching":
      st.markdown('[Video: 45 second vignette on the importance of computational thinking](https://youtu.be/y0EJsWmNvFU)')                   
 elif selection == "Research":
      st.title("Aneet Narendranath's Research Output Dashboard")
-     st.write("While my primary occupation is instruction, I have remained active in scientific research.")
+     st.write("While my full-time occupation is instruction, I have remained active in scientific research.")
      st.write("This is a list of publications and presentations, by year.  In the years 2016 and 2019 my presentation at the Wolfram technology conference were recorded as media and published online.")
      st.write("My research focus has been on numerical methods for nonlinear problems in technology and quantitative methods in assessment in STEM.")
      df_research = pd.read_csv('ResearchCitations.csv')     
