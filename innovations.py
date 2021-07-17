@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
+#from tabulate import tabulate
 
 st.set_page_config(
      page_title='Aneet Narendranath\'s Teaching Dashboard'
@@ -15,6 +16,13 @@ st.set_page_config(
 
 st.title("Aneet Narendranath's Teaching Experience Dashboard")
 df = pd.read_csv('innovations-timeline-2.csv')
+df = df.assign(hack='').set_index('hack')
+
+df_evals = pd.read_csv('TeachingEvals.csv')
+df_evals[["Eval Score out of 5.0"]] = df_evals[["Eval Score out of 5.0"]]
+df_evals = df_evals.assign(hack='').set_index('hack')
+
+
 year_items = df['Year']
 st.sidebar.write('I started teaching in the spring semester of 2013.  Since then I have instructed cross-curricular courses and created innovative examples and published some at ASEE conferences.  My current education research is on data driven systematic design of instruction, forecast models of student performance and machine learning algorithms to identify learning groups.')
 
@@ -22,7 +30,7 @@ st.sidebar.markdown("---")
 st.sidebar.write("This is an interactive page fully created in Python that showcases my teaching experience, teaching evaluation and innovations, nomination for teaching awards and course descriptions.")
 st.sidebar.markdown("Aneet Narendranath (C) 2021")
 
-df_evals = pd.read_csv('TeachingEvals.csv')
+
 #st.dataframe(df_evals)
 st.markdown("## :bar_chart: All Teaching Evaluation Scores")
 st.write('Hover on each data point to see the year I instructed this course, the course enrollment and the number of students who responded to a teaching evaluation survey.')
@@ -48,7 +56,8 @@ yr_evals = df_evals[["Year"]]
 st.markdown("## :date: Teaching Evaluation Scores by Year")
 x = st.selectbox('Select Year', np.unique(year_items) , key = "innovations")
 
-st.dataframe(df_evals[df_evals['Year']==x][["Course", "Enrollment", "Responded", "Eval Score out of 5.0"]])
+st.table(df_evals[df_evals['Year']==x][["Course", "Enrollment", "Responded", "Eval Score out of 5.0"]])
+
 # fig = px.scatter(df_evals[df_evals['Year']==x], x="Course", y="Eval Score out of 5.0", hover_data=['Enrollment', 'Responded'])
 # st.plotly_chart(fig)
 
@@ -70,9 +79,26 @@ st.dataframe(df_evals[df_evals['Year']==x][["Course", "Enrollment", "Responded",
 #st.plotly_chart(fig4)
 
 
+st.markdown('### :bulb: Summary of instructional innovations & scholarly outcomes by year')
+st.table(df[df['Year']==x][["Course", "Activity", "Category", "Scholarly output", "Other Outcome"]])
 
-st.markdown('## :bulb: Summary of instructional innovations & scholarly outcomes by year')
-st.dataframe(df[df['Year']==x][["Course", "Activity", "Category", "Scholarly output", "Other Outcome"]].transpose())
+# st.write(str(df[df['Year']==x][["Course"]]).split()[-1])
+
+# temp_activity = str(df[df['Year']==x][["Activity"]]).split()
+# activity = ' '.join(temp_activity[2:])
+# st.write("Activity: ", activity)
+
+# temp_category = str(df[df['Year']==x][["Category"]]).split()
+# category = ' '.join(temp_category[2:])
+# st.write("Category: ", category)
+
+# temp_sch = str(df[df['Year']==x][["Scholarly output"]]).split()
+# sch = ' '.join(temp_sch[2:len(temp_sch)-1])
+# st.write("Scholarly outcome: ", sch)
+
+# temp_other = str(df[df['Year']==x][["Other Outcome"]]).split()
+# other = ' '.join(temp_other[2:len(temp_other)-1])
+# st.write("Scholarly outcome: ", other)
 
 
 #st.dataframe( df[df['Year']==x] )
@@ -109,7 +135,9 @@ nominations = np.array(['Wolfram Innovator Award Nomination',
                         'Deans Teaching Showcase'])
 category = np.array(['Industry', 'Department', 'Department', 'Department', 'Department', 'College'])                        
 df_awards = pd.DataFrame({'Year': yr, 'Nomination or Award': nominations, 'Category':category})
-st.dataframe(df_awards[df_awards['Year']==x])
+df_awards = df_awards.assign(hack='').set_index('hack')
+
+st.table(df_awards[df_awards['Year']==x])
 
 # fig2 = go.Figure(data=[go.Table(
 #     header=dict(values=list(df_awards.columns),
