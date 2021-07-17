@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 #from tabulate import tabulate
 
 st.set_page_config(
-     page_title='Aneet Narendranath\'s Academic Experience and Achievement Dashboard',
-     layout="wide"
+     page_title='Aneet Narendranath\'s Academic Experience and Achievement Dashboard'
+     #layout="wide"
 )
 
 
