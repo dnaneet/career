@@ -45,7 +45,7 @@ yr_evals = df_evals[["Year"]]
 #x_evals = st.selectbox('Select Year', np.unique(yr_evals), key = "innovations")
 #df_evals[df_evals['Year']==x][["Course", "Enrollment", "Responded", "Eval Score out of 5.0"]]
 
-st.subheader("Teaching Evaluation Scores by Year")
+st.markdown("## :date: Teaching Evaluation Scores by Year")
 x = st.selectbox('Select Year', np.unique(year_items) , key = "innovations")
 
 st.dataframe(df_evals[df_evals['Year']==x][["Course", "Enrollment", "Responded", "Eval Score out of 5.0"]])
