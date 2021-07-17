@@ -49,6 +49,35 @@ with expand_teaching_eval:
 fig = px.scatter(df_evals, x = "Course", y = "Eval Score out of 5.0", hover_data = ["Year", "Enrollment", "Responded"], size = "Enrollment", color = "Course")
 st.plotly_chart(fig)
 
+
+st.markdown("### :information_source: Course descriptions")
+expand = st.beta_expander(label='Expand me for course descriptions')
+with expand:
+     list_of_courses = df_evals[["Course"]]
+     c = st.selectbox('Select a course name that featured in one of the tables above', np.unique(list_of_courses))
+
+     if c == "Adv Fluid Mech":
+          st.write("This is a graduate course in Fluid Mechanics.  The focus is on partial differential equation based models, analytical and numerical solutions to reduced forms of the Navier-Stokes equations.")
+     elif c == "Comp fl Eng":
+          st.write("This is an course on Computational Fluids Engineering (CFD with software tools).  The enrollment was composed of both undergraduate and graduate students.  The graduate students had an extra assignment of writing MATLAB code to solve the Burger's equation.")
+     elif c == "Comp fl Eng (Grad)":
+          st.write("This is an course on Computational Fluids Engineering (CFD with software tools).  The enrollment was composed of both undergraduate and graduate students.  The graduate students had an extra assignment of writing MATLAB code to solve the Burger's equation.")       
+     elif c == "Intro Thermo/ETF-1":
+          st.write("This is an undergraduate course on introductory thermodynamics. In our curriculum, this is also known as ETF-2 (Energy ThermoFluids 1.")
+     elif c == "Heat Transfer":
+          st.write("This is an undergraduate course in Heat Transfer.  In our curriculum, this is also known as ETF-2 (Energy ThermoFluids 2.")
+     elif c == "Intro to FEM":
+          st.write("This is an elective course on the Finite Element Method.  It has both undergraduate students and graduate students enrolled.  There is no difference in instruction or expectation from either level of student.")
+     elif c == "MEP II":
+          st.write("This is 'Mechanical Engineering Practice - II', a hands-on undergraduate course that focuses on 'theory through practice'.  It is the second of a 4-course sequence and focuses on hands-on experiments, data acquisition and technical communication of energy and momentum conservation principles as applicable to rigid body dynamics and fluid flow (incompressible regime). ")     
+     elif c == "MEP III":
+          st.write("This is 'Mechanical Engineering Practice - III', a hands-on undergraduate course that focuses on 'theory through practice'.  It is the third of a 4-course sequence and focuses on 'Model Based Design through a collaborative studio setting'.  Teams of 4-6 students work on a semester long project to create a fully functional 3D rigid body computer model of a 'locomotion device' (such as an UAV, Automated Pallet, Amazon Conveyor belt).  Students also perform FEA (static) and Fatigue strength analysis of critical some critical component of the locomotion device they design.")  
+     elif c == "Mechanics of Materials":
+          st.write("This is an undergraduate course in Strength of Materials.  Starting fall 2021, a cloud computing component will be (has been) introduced in this course.")  
+     elif c == "Statics":
+          st.write("This is an undergraduate course in Static force balances.")            
+
+
 yr_evals = df_evals[["Year"]]
 #x_evals = st.selectbox('Select Year', np.unique(yr_evals), key = "innovations")
 #df_evals[df_evals['Year']==x][["Course", "Enrollment", "Responded", "Eval Score out of 5.0"]]
@@ -151,33 +180,6 @@ st.table(df_awards[df_awards['Year']==x])
 # ])
 # #fig2.update_layout(width=500, height=300)
 # st.plotly_chart(fig2)
-
-st.markdown("### :information_source: Course descriptions")
-expand = st.beta_expander(label='Expand me for course descriptions')
-with expand:
-     list_of_courses = df_evals[["Course"]]
-     c = st.selectbox('Select a course name that featured in one of the tables above', np.unique(list_of_courses))
-
-     if c == "Adv Fluid Mech":
-          st.write("This is a graduate course in Fluid Mechanics.  The focus is on partial differential equation based models, analytical and numerical solutions to reduced forms of the Navier-Stokes equations.")
-     elif c == "Comp fl Eng":
-          st.write("This is an course on Computational Fluids Engineering (CFD with software tools).  The enrollment was composed of both undergraduate and graduate students.  The graduate students had an extra assignment of writing MATLAB code to solve the Burger's equation.")
-     elif c == "Comp fl Eng (Grad)":
-          st.write("This is an course on Computational Fluids Engineering (CFD with software tools).  The enrollment was composed of both undergraduate and graduate students.  The graduate students had an extra assignment of writing MATLAB code to solve the Burger's equation.")       
-     elif c == "Intro Thermo/ETF-1":
-          st.write("This is an undergraduate course on introductory thermodynamics. In our curriculum, this is also known as ETF-2 (Energy ThermoFluids 1.")
-     elif c == "Heat Transfer":
-          st.write("This is an undergraduate course in Heat Transfer.  In our curriculum, this is also known as ETF-2 (Energy ThermoFluids 2.")
-     elif c == "Intro to FEM":
-          st.write("This is an elective course on the Finite Element Method.  It has both undergraduate students and graduate students enrolled.  There is no difference in instruction or expectation from either level of student.")
-     elif c == "MEP II":
-          st.write("This is 'Mechanical Engineering Practice - II', a hands-on undergraduate course that focuses on 'theory through practice'.  It is the second of a 4-course sequence and focuses on hands-on experiments, data acquisition and technical communication of energy and momentum conservation principles as applicable to rigid body dynamics and fluid flow (incompressible regime). ")     
-     elif c == "MEP III":
-          st.write("This is 'Mechanical Engineering Practice - III', a hands-on undergraduate course that focuses on 'theory through practice'.  It is the third of a 4-course sequence and focuses on 'Model Based Design through a collaborative studio setting'.  Teams of 4-6 students work on a semester long project to create a fully functional 3D rigid body computer model of a 'locomotion device' (such as an UAV, Automated Pallet, Amazon Conveyor belt).  Students also perform FEA (static) and Fatigue strength analysis of critical some critical component of the locomotion device they design.")  
-     elif c == "Mechanics of Materials":
-          st.write("This is an undergraduate course in Strength of Materials.  Starting fall 2021, a cloud computing component will be (has been) introduced in this course.")  
-     elif c == "Statics":
-          st.write("This is an undergraduate course in Static force balances.")            
 
 col1, col2, col3 = st.beta_columns(3)
 with col1:
