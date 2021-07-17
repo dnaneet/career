@@ -14,7 +14,6 @@ st.set_page_config(
 
 
 
-st.title("Aneet Narendranath's Teaching Experience Dashboard")
 df = pd.read_csv('innovations-timeline-2.csv')
 df = df.assign(hack='').set_index('hack')
 year_items = df['Year']
@@ -33,6 +32,7 @@ st.sidebar.markdown("---")
 
 
 if selection == "Teaching":
+     st.title("Aneet Narendranath's Teaching Experience Dashboard")
      #st.dataframe(df_evals)
      st.markdown("## :bar_chart: All Teaching Evaluation Scores")
      st.write('Hover on each data point to see the year I instructed this course, the course enrollment and the number of students who responded to a teaching evaluation survey.')
@@ -183,7 +183,7 @@ if selection == "Teaching":
      st.markdown('[Video: 2 minute vignette on the Convergence, Iteration with help from my GTA (Graduate Tabby Assistant)](https://youtu.be/VZeUe9ZjWb8)')
      st.markdown('[Video: 45 second vignette on the importance of computational thinking](https://youtu.be/y0EJsWmNvFU)')                   
 elif selection == "Research":
-     st.markdown("## :clipboard: Research Output")
+     st.title("Aneet Narendranath's Research Output Dashboard")     
      st.write("This is a list of publications and presentations, by year.  In the years 2016 and 2019 my presentation at the Wolfram technology conference were recorded as media and published online.")
      st.write("My research focus has been on numerical methods for nonlinear problems in technology and quantitative methods in assessment in STEM.")
      df_research = pd.read_csv('ResearchCitations.csv')     
