@@ -28,7 +28,7 @@ df_evals = df_evals.assign(hack='').set_index('hack')
 selection = st.sidebar.radio('Select ', ["Teaching", "Research"])
 st.sidebar.write('I started teaching in the spring semester of 2013.  Since then I have instructed cross-curricular courses and created innovative examples and published some at ASEE conferences.  My current education research is on data driven systematic design of instruction, forecast models of student performance and machine learning algorithms to identify learning groups.')
 st.sidebar.markdown("---")
-st.sidebar.write("This is an interactive page fully created in Python that showcases my teaching experience, teaching evaluation and innovations, nomination for teaching awards and course descriptions.")
+st.sidebar.write("This is an interactive page fully created in Python that showcases my teaching experience, teaching evaluation and innovations, nomination for teaching awards and course descriptions AND research output.")
 st.sidebar.markdown("Aneet Narendranath (C) 2021")
 st.sidebar.markdown("---")
 
