@@ -35,7 +35,7 @@ st.sidebar.markdown("Aneet Narendranath (C) 2021")
 st.markdown("## :bar_chart: All Teaching Evaluation Scores")
 st.write('Hover on each data point to see the year I instructed this course, the course enrollment and the number of students who responded to a teaching evaluation survey.')
 st.write('Heat transfer does not have data available since the paper teaching evaluation has been misplaced.  If memory serves me right, this evaluation was around 4.2 out of 5.0.')
-st.write('The bubble size is by enrollment.')
+st.write('The bubble size is by enrollment.  Each bubble represents teaching that course once.  Some courses have multiple bubbles since I instructed them on mulitple occasions.')
 
 expand_teaching_eval = st.beta_expander(label='Expand me for a description of what these teaching evals represent and university policies governing them')
 
