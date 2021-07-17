@@ -124,10 +124,8 @@ st.dataframe(df_awards[df_awards['Year']==x])
 # #fig2.update_layout(width=500, height=300)
 # st.plotly_chart(fig2)
 
-
-expand = st.beta_expander(label='Expand me for course descriptions')
-
 st.subheader("Course descriptions")
+expand = st.beta_expander(label='Expand me for course descriptions')
 with expand:
      list_of_courses = df_evals[["Course"]]
      c = st.selectbox('Select a course name that featured in one of the tables above', np.unique(list_of_courses))
