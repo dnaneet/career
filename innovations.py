@@ -8,12 +8,13 @@ import matplotlib.pyplot as plt
 #from tabulate import tabulate
 
 st.set_page_config(
-     page_title='Aneet Narendranath\'s Academic Experience and Achievement Dashboard'
+     page_title='Aneet Narendranath\'s Teaching Dashboard'
      #layout="wide"
 )
 
 
 
+st.title("Aneet Narendranath's Teaching Experience Dashboard")
 df = pd.read_csv('innovations-timeline-2.csv')
 df = df.assign(hack='').set_index('hack')
 year_items = df['Year']
@@ -24,15 +25,16 @@ df_evals = df_evals.assign(hack='').set_index('hack')
 
 
 
-selection = st.sidebar.radio('Select ', ["Teaching", "Research"])
-st.sidebar.write("This is an interactive page fully created in Python that showcases my teaching experience, teaching evaluation and innovations, nomination for teaching awards and course descriptions AND research output.")
+selection = st.sidebar.radio('Select ', ["Teaching", "Research", "Entrepreneurial"])
+st.sidebar.write('I started teaching in the spring semester of 2013.  Since then I have instructed cross-curricular courses and created innovative examples and published some at ASEE conferences.  My current education research is on data driven systematic design of instruction, forecast models of student performance and machine learning algorithms to identify learning groups.')
+st.sidebar.markdown("---")
+st.sidebar.write("This is an interactive page fully created in Python that showcases my teaching experience, teaching evaluation and innovations, nomination for teaching awards and course descriptions.")
 st.sidebar.markdown("Aneet Narendranath (C) 2021")
 st.sidebar.markdown("---")
 
 
 
 if selection == "Teaching":
-     st.title("Aneet Narendranath's Teaching Experience Dashboard")
      #st.dataframe(df_evals)
      st.markdown("## :bar_chart: All Teaching Evaluation Scores")
      st.write('Hover on each data point to see the year I instructed this course, the course enrollment and the number of students who responded to a teaching evaluation survey.')
@@ -183,8 +185,7 @@ if selection == "Teaching":
      st.markdown('[Video: 2 minute vignette on the Convergence, Iteration with help from my GTA (Graduate Tabby Assistant)](https://youtu.be/VZeUe9ZjWb8)')
      st.markdown('[Video: 45 second vignette on the importance of computational thinking](https://youtu.be/y0EJsWmNvFU)')                   
 elif selection == "Research":
-     st.title("Aneet Narendranath's Research Output Dashboard")
-     st.write("While my full-time occupation is instruction, I have remained active in scientific research.")
+     st.markdown("## :clipboard: Research Output")
      st.write("This is a list of publications and presentations, by year.  In the years 2016 and 2019 my presentation at the Wolfram technology conference were recorded as media and published online.")
      st.write("My research focus has been on numerical methods for nonlinear problems in technology and quantitative methods in assessment in STEM.")
      df_research = pd.read_csv('ResearchCitations.csv')     
@@ -196,6 +197,11 @@ elif selection == "Research":
      st.table(df_research[df_research['Year']==select_year][["Authors", "Year", "Title", "Publication", "Media"]])
      st.markdown("[Video: Dynamics of liquid films in microgravity](https://www.youtube.com/watch?v=qTCwmUuM-Gg)")
      st.markdown("[Video: Approximating Steam Properties with a Neural Network](https://www.youtube.com/watch?v=xngHOVYZ1ak)")
+elif selection == "Entrepreneurial"     :
+     st.write("In January 2021, I co-founded Voxel Science LLC.  A Michigan based technology startup focused on simulation sandboxes with real time interactivity.")
+     st.write("In March 2021 Voxel Science LLC received a technology grant from Wolfram Research Inc.")
+     st.markdown("---")
+     st.write("Due to potential IP, descriptions of our digital products are not immediately available for public perusal.")
 
 col1, col2, col3 = st.beta_columns(3)
 with col1:
