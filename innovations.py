@@ -71,7 +71,7 @@ st.dataframe(df_evals[df_evals['Year']==x][["Course", "Enrollment", "Responded",
 
 
 
-st.subheader('Summary of instructional innovations & scholarly outcomes by year')
+st.markdown('## :bulb: Summary of instructional innovations & scholarly outcomes by year')
 st.dataframe(df[df['Year']==x][["Course", "Activity", "Category", "Scholarly output", "Other Outcome"]].transpose())
 
 
@@ -99,7 +99,7 @@ st.dataframe(df[df['Year']==x][["Course", "Activity", "Category", "Scholarly out
 
 
 
-st.subheader('Nomination for Instructional Awards by year')
+st.markdown('## :trophy: Nomination for Instructional Awards by year')
 yr = np.array([2016, 2017, 2018, 2019, 2020, 2020]);
 nominations = np.array(['Wolfram Innovator Award Nomination',
                         'Best Teacher - Finalist out of 40 faculty', 
