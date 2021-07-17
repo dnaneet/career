@@ -124,7 +124,7 @@ st.dataframe(df_awards[df_awards['Year']==x])
 # #fig2.update_layout(width=500, height=300)
 # st.plotly_chart(fig2)
 
-st.subheader("Course descriptions")
+st.markdown("### :information_source: Course descriptions")
 expand = st.beta_expander(label='Expand me for course descriptions')
 with expand:
      list_of_courses = df_evals[["Course"]]
