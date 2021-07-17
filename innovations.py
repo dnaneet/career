@@ -155,13 +155,13 @@ with expand:
 
 col1, col2, col3 = st.beta_columns(3)
 with col1:
-     st.markdown(':email: [dnaneet@mtu.edu](dnaneet@mtu.edu)')
+     st.markdown('### :email: [dnaneet@mtu.edu](dnaneet@mtu.edu)')
 
 with col2:
-     st.markdown(':handshake: [LinkedIn](https://www.linkedin.com/in/dnaneet/)') 
+     st.markdown('### :handshake: [LinkedIn](https://www.linkedin.com/in/dnaneet/)') 
 
 with col3:
-     st.markdown(':books: [Google Scholar](https://scholar.google.com/citations?hl=en&user=uSSO_eAAAAAJ&view_op=list_works&authuser=1&sortby=pubdate)')
+     st.markdown('### :books: [Google Scholar](https://scholar.google.com/citations?hl=en&user=uSSO_eAAAAAJ&view_op=list_works&authuser=1&sortby=pubdate)')
 
 st.markdown('[Short lecture on the Convergence, Iteration with help from my GTA (Graduate Tabby Assistant)](https://youtu.be/VZeUe9ZjWb8)')
 st.markdown('[Short lecture on the importance of computational thinking](https://youtu.be/y0EJsWmNvFU)')
