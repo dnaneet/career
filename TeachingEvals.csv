@@ -1,36 +1,36 @@
-Course,Course Number,Semester,Year,Enrollment,Responded,Eval Score out of 5.0
-Mechanics of Materials,2150,Spring,2020,99,57,4.18
-Mechanics of Materials,2150,Spring,2020,48,19,4.33
-Mechanics of Materials,2150,Fall,2016,80,Data not available,3.84
-Mechanics of Materials,2150,Spring,2017,87,51,4.06
-Intro to FEM,4405,Fall,2017,44,24,4.47
-Intro to FEM,4405,Spring ,2017,40,23,4.32
-Intro to FEM,4405,Summer,2016,10,Data not available,4.9
-Intro Thermo/ETF-1,2201,Spring,2016,45,Data not available,4.17
-Intro to FEM,4405,Spring ,2016,45,Data not available,4.23
-MEP II,2911,Fall,2015,60,Data not available,3.64
-MEP II,2911,Fall,2015,55,Data not available,3.78
-Intro to FEM,4405,Fall,2015,45,Data not available,3.9
-Intro to FEM,4405,Summer,2015,11,Data not available,4.41
-Mechanics of Materials,2150,Summer ,2015,31,Data not available,3.84
-Statics,2110,Spring ,2014,45,Data not available,4.04
-Statics,2110,Spring ,2014,45,Data not available,4.15
-Comp fl Eng,4210,Fall,2013,15,Data not available,4.4
-Comp fl Eng (Grad),5215,Fall,2013,15,Data not available,3.78
-Intro Thermo/ETF-1,2200,Spring,2013,36,Data not available,3.97
-Heat Transfer,3230,Spring,2014,40,Data not available,4.16
-MEP III,3901,Fall,2017,61,40,3.88
-MEP III,3901,Fall,2018,63,37,3.71
-MEP III,3901,Fall,2018,61,37,3.81
-MEP III,3901,Fall,2018,61,41,3.54
-Intro to FEM,4405,Spring,2019,35,25,3.84
-Intro Thermo/ETF-1,2201,Spring,2019,42,29,4.26
-MEP III,3901,Spring,2019,52,27,3.72
-MEP III,3901,Fall,2019,59,33,3.72
-Adv Fluid Mech,5210,Fall,2019,14,13,4.37
-Adv Fluid Mech,5210,Fall,2020,5,4,3.79
-MEP III,3901,Fall ,2020,64,27,4.39
-Intro to FEM,4405,Fall ,2020,38,22,4.47
-Mechanics of Materials,2150,Spring ,2021,49,32,4.18
-MEP III,3901,Spring,2021,48,26,3.85
-Intro to FEM,4405,Spring,2021,45,16,4.18
+Course,Course Number,Semester,Year,Enrollment,Responded,Eval Score out of 5.0, Notes
+Mechanics of Materials,2150,Spring,2020,99,57,4.18, COVID affected semester
+Mechanics of Materials,2150,Spring,2020,48,19,4.33, COVID affected semester
+Mechanics of Materials,2150,Fall,2016,80,Data not available,3.84,
+Mechanics of Materials,2150,Spring,2017,87,51,4.06,
+Intro to FEM,4405,Fall,2017,44,24,4.47,
+Intro to FEM,4405,Spring ,2017,40,23,4.32,
+Intro to FEM,4405,Summer,2016,10,Data not available,4.9,
+Intro Thermo/ETF-1,2201,Spring,2016,45,Data not available,4.17,
+Intro to FEM,4405,Spring ,2016,45,Data not available,4.23,
+MEP II,2911,Fall,2015,60,Data not available,3.64,
+MEP II,2911,Fall,2015,55,Data not available,3.78,
+Intro to FEM,4405,Fall,2015,45,Data not available,3.9,
+Intro to FEM,4405,Summer,2015,11,Data not available,4.41, First time teaching this course
+Mechanics of Materials,2150,Summer ,2015,31,Data not available,3.84, First time teaching this course
+Statics,2110,Spring ,2014,45,Data not available,4.04, First time teaching this course
+Statics,2110,Spring ,2014,45,Data not available,4.15,
+Comp fl Eng,4210,Fall,2013,15,Data not available,4.4, First time teaching this course
+Comp fl Eng (Grad),5215,Fall,2013,15,Data not available,3.78,
+Intro Thermo/ETF-1,2200,Spring,2013,36,Data not available,3.97,First time teaching this course
+Heat Transfer,3230,Spring,2014,40,Data not available,4.16, First time teaching this course
+MEP III,3901,Fall,2017,61,40,3.88, First time teaching this course
+MEP III,3901,Fall,2018,63,37,3.71,
+MEP III,3901,Fall,2018,61,37,3.81,
+MEP III,3901,Fall,2018,61,41,3.54,
+Intro to FEM,4405,Spring,2019,35,25,3.84,
+Intro Thermo/ETF-1,2201,Spring,2019,42,29,4.26,
+MEP III,3901,Spring,2019,52,27,3.72,
+MEP III,3901,Fall,2019,59,33,3.72,
+Adv Fluid Mech,5210,Fall,2019,14,13,4.37, First time teaching this course
+Adv Fluid Mech,5210,Fall,2020,5,4,3.79, Remote. Fully inverted classroom
+MEP III,3901,Fall,2020,64,27,4.39, Remote.  Historically highest score for this course across all 5 faculty who have instructed it
+Intro to FEM,4405,Fall,2020,38,22,4.47, Remote. Fully inverted classroom
+Mechanics of Materials,2150,Spring,2021,49,32,4.18, Remote. Fully inverted classroom
+MEP III,3901,Spring,2021,48,26,3.85, Remote. Fully inverted classroom
+Intro to FEM,4405,Spring,2021,45,16,4.18, Remote. Fully inverted classroom
