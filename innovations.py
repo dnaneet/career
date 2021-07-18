@@ -24,15 +24,28 @@ df_evals = df_evals.assign(hack='').set_index('hack')
 
 
 
-selection = st.sidebar.radio('Select ', ["Teaching", "Research", "Entrepreneurial"])
+selection = st.sidebar.radio('Select ', ["Highlights", "Teaching", "Research", "Entrepreneurial"])
 st.sidebar.markdown("---")
 st.sidebar.write("This is an interactive page fully created in Python that showcases my teaching experience, teaching evaluation and innovations, nomination for teaching awards and course descriptions AND Research output.")
 st.sidebar.markdown("Aneet Narendranath (C) 2021")
 st.sidebar.markdown("---")
 
 
+if selection == "Highlights":
+     st.title("Highlights of my Teaching, Research, Equity and Entrepreneurship")
+     st.write("This page captures the highlights of my efforts since 2013 at Michigan Technological University.  Please visit in-depth pages on teaching, research and entrepreneurship by accessing the radio-buttons in the collapsible sidebar to the left.")
+     st.markdown("## 🧑‍🏫 Cross-curricular Teaching with focus on collaborative problem solving studios")
+     st.write("I teach 3-4 sections of courses across the Mechanical engineering curriculum.  Since 2019, I have begun to shed the traditional classroom (inert lecturing) approach in favour of the inverted classroom, emphasis on 1-on-1 time and collaborative design studios.")
+     
+     st.markdown("## :microscope: Multidisciplinary Research")
+     st.write("Although my full-time occupation is instruction, I am research active.  I publish 1-2 peer-reviewed papers in education research and fundamental scientific researh in peer-reviewed national and international conferences and journals.  My current research focus may be called: *the classroom as a dashboard*.  With this focus, I am actively working on numerical models and machine learning tools to support: systematic design of instruction, assessment and feedback and forecast models of student exam performance.")
 
-if selection == "Teaching":
+     st.markdown("## :chart_with_upwards_trend: Data-driven Restoration of Equity at the Engineering Learning Center")
+     st.write("I currently manage a peer-tutoring center in our Mechanical engineering department.  In fall 2021, through the application of usage data gathered over the last 3 years and the Srum project management framework, I am restoring equity in salaries for our tutors while ensuring that their short-term academic and career-oriented goals are met when they work at our peer-tutoring center.")
+
+     st.markdown("## :sparkles: Entrepreneurial work")
+     st.write("In January 2021, I co-founded a tech startup with a focus on simulation sandboxes.  We were awarded a technology grant by Wolfram Research Inc.  We are currently purusing seed grants to build the scope of our technology.  In fall 2021, we are planning on supporting a *Digital Engineering* project with a senior capstone design program in North America.")
+elif selection == "Teaching":
      st.title("Aneet Narendranath's Teaching Experience Dashboard")
      #st.dataframe(df_evals)
      st.markdown("## :bar_chart: All Teaching Evaluation Scores")
