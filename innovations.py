@@ -63,6 +63,7 @@ elif selection == "Teaching":
 
 
      fig = px.scatter(df_evals, x = "Course", y = "Eval Score out of 5.0", hover_data = ["Year", "Semester", "Enrollment", "Responded", "Note"], size = "Enrollment", color = "Course")
+     fig.update_yaxes(range=[0,5])
      st.plotly_chart(fig)
 
      yr_evals = df_evals[["Year"]]
