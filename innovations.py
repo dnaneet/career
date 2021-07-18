@@ -41,7 +41,7 @@ if selection == "Highlights":
      st.write("Although my full-time occupation is instruction, I am research active.  I publish 1-2 peer-reviewed papers in education research and fundamental scientific researh in peer-reviewed national and international conferences and journals.  My current research focus may be called: *the classroom as a dashboard*.  With this focus, I am actively working on numerical models and machine learning tools to support: systematic design of instruction, assessment and feedback and forecast models of student exam performance.")
 
      st.markdown("## :chart_with_upwards_trend: Data-driven Restoration of Equity at the Engineering Learning Center")
-     st.write("I currently manage a peer-tutoring center in our Mechanical engineering department.  In fall 2021, through the application of usage data gathered over the last 3 years and the Srum project management framework, I am restoring equity in salaries for our tutors while ensuring that their short-term academic and career-oriented goals are met when they work at our peer-tutoring center.")
+     st.write("I currently manage a peer-tutoring center (Engineering Learning Center) in our Mechanical engineering department.  In fall 2021, through the application of usage data gathered over the last 3 years and the Srum project management framework, I am restoring equity in salaries for our tutors while ensuring that their short-term academic and career-oriented goals are met when they work at our peer-tutoring center.  The ELC coaches were being paid 30% less than their peers at other learning centers (due to different amount of funds available).")
 
      st.markdown("## :sparkles: Entrepreneurial work")
      st.write("In January 2021, I co-founded a tech startup with a focus on simulation sandboxes.  We were awarded a technology grant by Wolfram Research Inc.  We are currently purusing seed grants to build the scope of our technology.  In fall 2021, we are planning on supporting a *Digital Engineering* project with a senior capstone design program in North America.")
@@ -49,7 +49,7 @@ elif selection == "Teaching":
      st.title("Aneet Narendranath's Teaching Experience Dashboard")
      #st.dataframe(df_evals)
      st.markdown("## :bar_chart: All Teaching Evaluation Scores")
-     st.write('Hover on each data point to see the year I instructed this course, the course enrollment and the number of students who responded to a teaching evaluation survey.')
+     st.write('Hover on each data point to see the year I instructed this course, the course enrollment and the number of students who responded to a teaching evaluation survey.  Some of the bubbles provide additional context through an added Note.')
      st.write('Heat transfer does not have data available since the paper teaching evaluation has been misplaced.  If memory serves me right, this evaluation was around 4.2 out of 5.0.')
      st.write('The bubble size is by enrollment.')
 
@@ -72,7 +72,7 @@ elif selection == "Teaching":
      st.markdown("## :date: Teaching Evaluation Scores by Year")
      x = st.selectbox('Select Year', np.unique(year_items) , key = "innovations")
 
-     st.table(df_evals[df_evals['Year']==x][["Course", "Enrollment", "Responded", "Eval Score out of 5.0"]])
+     st.table(df_evals[df_evals['Year']==x][["Course", "Enrollment", "Responded", "Eval Score out of 5.0", "Note"]])
 
      # fig = px.scatter(df_evals[df_evals['Year']==x], x="Course", y="Eval Score out of 5.0", hover_data=['Enrollment', 'Responded'])
      # st.plotly_chart(fig)
