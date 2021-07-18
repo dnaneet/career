@@ -72,7 +72,7 @@ elif selection == "Teaching":
      st.markdown("## :date: Teaching Evaluation Scores by Year")
      x = st.selectbox('Select Year', np.unique(year_items) , key = "innovations")
 
-     st.table(df_evals[df_evals['Year']==x][["Course", "Enrollment", "Responded", "Eval Score out of 5.0", str("Note")]])
+     st.table(df_evals[df_evals['Year']==x][["Course", "Semester", "Enrollment", "Responded", "Eval Score out of 5.0", str("Note")]])
 
      # fig = px.scatter(df_evals[df_evals['Year']==x], x="Course", y="Eval Score out of 5.0", hover_data=['Enrollment', 'Responded'])
      # st.plotly_chart(fig)
