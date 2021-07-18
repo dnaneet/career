@@ -62,7 +62,7 @@ elif selection == "Teaching":
           st.markdown('###### [What happens with student teaching evaluations (News Article at Michigan Tech)?](https://mtulode.com/1130/news/what-happens-with-students-course-evaluations/)')
 
 
-     fig = px.scatter(df_evals, x = "Course", y = "Eval Score out of 5.0", hover_data = ["Year", "Semester", "Enrollment", "Responded", "Note"], size = "Enrollment", color = "Course")
+     fig = px.scatter(df_evals, x = "Course", y = "Eval Score out of 5.0", hover_data = ["Year", "Semester", "Enrollment", "Responded"], size = "Enrollment", color = "Course")
      st.plotly_chart(fig)
 
      yr_evals = df_evals[["Year"]]
