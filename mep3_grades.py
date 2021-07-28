@@ -17,7 +17,8 @@ u = np.unique(df['Semester'])
 
 sem = st.sidebar.selectbox('Select semester of interest:', ['Fall 2017', 'Spring 2018', 'Fall 2018', 'Spring 2019', 'Fall 2019', 'Fall 2020', 'Spring 2021'])
 ts =  st.sidebar.slider('Select threshold final score:', max_value = 100, min_value=0)
-
+st.sidebar.markdown("---")
+st.sidebar.markdown("Created by Dr. Narendranath using Python and Streamlit.  Confidential student identifier information has not been used in this dashboard.")
 col1, col2, col3  = st.beta_columns(3)
 
 
