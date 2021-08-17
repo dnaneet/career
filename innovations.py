@@ -52,7 +52,7 @@ elif selection == "Teaching":
      st.write('Hover on each data point to see the year I instructed this course, the course enrollment and the number of students who responded to a teaching evaluation survey.  Some of the bubbles provide additional context through an added Note.')
      st.write('You may click and drag around data points to zoom in.')
      st.write('Heat transfer does not have data available since the paper teaching evaluation has been misplaced.  If memory serves me right, this evaluation was around 4.2 out of 5.0.')
-     st.write('The bubble size is by enrollment.  Some bubbles are on top of each other since they represent the exam same teaching evaluation score but in different semesters.')
+     st.write('The bubble size is by enrollment.  Some bubbles are on top of each other since they represent the exact same teaching evaluation score but in different semesters.')
 
      expand_teaching_eval = st.expander(label='Expand me for a description of what these teaching evals represent and university policies governing them')
 
