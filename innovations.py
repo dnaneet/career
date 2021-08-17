@@ -171,7 +171,7 @@ elif selection == "Teaching":
      # st.plotly_chart(fig2)
 
      st.markdown("### :information_source: Course descriptions")
-     expand = st.beta_expander(label='Expand me for course descriptions')
+     expand = st.expander(label='Expand me for course descriptions')
      with expand:
           list_of_courses = df_evals[["Course"]]
           c = st.selectbox('Select a course name that featured in one of the tables above', np.unique(list_of_courses))
@@ -218,7 +218,7 @@ elif selection == "Entrepreneurial":
      st.markdown("---")
      st.write("Due to potential IP, descriptions of our digital products are not immediately available for public perusal.")
 
-col1, col2, col3 = st.beta_columns(3)
+col1, col2, col3 = st.columns(3)
 with col1:
      st.markdown('### :email: [dnaneet@mtu.edu](dnaneet@mtu.edu)')
 
