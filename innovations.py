@@ -40,7 +40,7 @@ if selection == "Highlights":
      st.markdown("## :microscope: Multidisciplinary Research")
      st.write("Although my full-time occupation is instruction, I am research active.  I publish 1-2 peer-reviewed papers in education research and fundamental scientific researh in peer-reviewed national and international conferences and journals.  My current research focus may be called: *the classroom as a dashboard*.  With this focus, I am actively working on numerical models and machine learning tools to support: systematic design of instruction, assessment and feedback and forecast models of student exam performance.")
 
-     st.markdown("## :chart_with_upwards_trend: Data-driven Restoration of Equity at the Engineering Learning Center")
+     st.markdown("## :chart_with_upwards_trend: Data-driven staffing at the Engineering Learning Center")
      st.write("I currently manage a peer-tutoring center (Engineering Learning Center) in our Mechanical engineering department.  In fall 2021, through the application of usage data gathered over the last 3 years and the Srum project management framework, I am restoring equity in salaries for our tutors while ensuring that their short-term academic and career-oriented goals are met when they work at our peer-tutoring center.  The ELC coaches were being paid 30% less than their peers at other learning centers (due to different amount of funds available).")
 
      st.markdown("## :sparkles: Entrepreneurial work")
@@ -54,7 +54,7 @@ elif selection == "Teaching":
      st.write('Heat transfer does not have data available since the paper teaching evaluation has been misplaced.  If memory serves me right, this evaluation was around 4.2 out of 5.0.')
      st.write('The bubble size is by enrollment.  Some bubbles are on top of each other since they represent the exam same teaching evaluation score but in different semesters.')
 
-     expand_teaching_eval = st.beta_expander(label='Expand me for a description of what these teaching evals represent and university policies governing them')
+     expand_teaching_eval = st.expander(label='Expand me for a description of what these teaching evals represent and university policies governing them')
 
      with expand_teaching_eval:
           st.markdown('##### University policies and notes about teaching evaluations:')
