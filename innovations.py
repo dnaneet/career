@@ -24,10 +24,10 @@ df_evals[["Eval Score out of 5.0"]] = df_evals[["Eval Score out of 5.0"]]
 df_evals = df_evals.assign(hack='').set_index('hack')
 
 im = Image.open("career-progression.png")
-#piimg = Image.open("pi.jpg")
-#loginimg = Image.open("log-in.png")
-#feedingimg = Image.open("feeding-habits.png")
-#harppiimg = Image.open("harppi.png")
+piimg = Image.open("pi.jpg")
+loginimg = Image.open("log-in.png")
+feedingimg = Image.open("feeding-habits.png")
+harppiimg = Image.open("harppi.png")
 
 selection = st.sidebar.radio('Select ', ["Career Highlights", "Teaching", "Research", "Entrepreneurial Activity", "Extra-Curricular Activities with intellectual value"])
 st.sidebar.markdown("---")
@@ -227,8 +227,8 @@ elif selection == "Entrepreneurial Activity":
 elif selection == "Extra-Curricular Activities with intellectual value":
      st.title("Aneet Narendranath's Extra-Curricular activities")	
      st.subheader("📊 A Raspberry-Pi learning center usage tracker")
-     #st.image(piimg, use_column_width="always")
-     #st.image(loginimg, use_column_width="always")
+     st.image(piimg, use_column_width="always")
+     st.image(loginimg, use_column_width="always")
      st.markdown("I wrote a [bash-script](https://github.com/dnaneet/learning-center-management) that ran on a [Raspberry Pi Zero](https://raw.githubusercontent.com/dnaneet/career/main/pi.jpg) and tracked the usage of a peer-supported engineering tutoring center (learning center).  This was created for a cost of approximately $100 and replaced a system that cost several thousand-dollars a year.")
      st.write("The Mag-Pi interviewed me about this initiative.  This interview may be found via [Mag-Pi Number 65](https://www.raspberrypi.org/magpi-issues/MagPi65.pdf).")
      st.subheader("🎵 Tracking the seasonal temperature and humidity variations around a Lyon and Healy Harp")
