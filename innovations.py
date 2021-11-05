@@ -29,7 +29,7 @@ df_evals = df_evals.assign(hack='').set_index('hack')
 #feedingimg = Image.open("feeding-habits.png")
 #harppiimg = Image.open("harppi.png")
 
-selection = st.sidebar.radio('Select ', ["Highlights", "Teaching", "Research", "Entrepreneurial", "ExtraCurricular"])
+selection = st.sidebar.radio('Select ', ["Highlights", "Teaching", "Research", "Entrepreneurial", "Extra-Curricular Activities with intellectual value"])
 st.sidebar.markdown("---")
 st.sidebar.write("This interactive page fully created in Python showcases my teaching experience, innovations, nomination for teaching awards, research output, entrepreneurial efforts, and extra-curricular activities.")
 st.sidebar.markdown("Aneet Narendranath (C) 2021")
@@ -224,7 +224,7 @@ elif selection == "Entrepreneurial":
      st.write("In March 2021 Voxel Science LLC received a technology grant from Wolfram Research Inc.")
      st.markdown("---")
      st.write("Due to potential IP, descriptions of our digital products are not immediately available for public perusal.")
-elif selection == "ExtraCurricular":
+elif selection == "Extra-Curricular Activities with intellectual value":
      st.title("Aneet Narendranath's Extra-Curricular activities")	
      st.subheader("A Raspberry-Pi learning center usage tracker")
      #st.image(piimg, use_column_width="always")
