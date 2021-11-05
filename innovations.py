@@ -23,7 +23,7 @@ df_evals = pd.read_csv('TeachingEvals.csv')
 df_evals[["Eval Score out of 5.0"]] = df_evals[["Eval Score out of 5.0"]]
 df_evals = df_evals.assign(hack='').set_index('hack')
 
-#im = Image.open("career-progression.png")
+im = Image.open("career-progression.png")
 #piimg = Image.open("pi.jpg")
 #loginimg = Image.open("log-in.png")
 #feedingimg = Image.open("feeding-habits.png")
@@ -205,7 +205,7 @@ elif selection == "Teaching":
 elif selection == "Research":
      st.title("Aneet Narendranath's Research Output Dashboard")
      st.markdown("Computing and numerical solutions are the pillars of my research career.  I have research experience spanning multiple length and time-scales as described in [this map](https://raw.githubusercontent.com/dnaneet/career/main/career-progression.png) of my activities.")
-     #st.image(im, use_column_width="always")
+     st.image(im, use_column_width="always")
      st.title("Aneet Narendranath's Research Output Dashboard")
      #st.write("In the years 2016 and 2019 my presentation at the Wolfram technology conference were recorded as media and published online.")
      #st.write("My research focus has been on numerical methods for nonlinear problems in technology and quantitative methods in assessment in STEM.")
