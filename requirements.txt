@@ -5,5 +5,3 @@ plotly
 dask
 matplotlib
 seaborn
-PIL
-image
