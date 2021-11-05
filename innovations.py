@@ -218,7 +218,7 @@ elif selection == "Research":
      st.table(df_research[df_research['Year']==select_year][["Authors", "Year", "Title", "Publication", "Media"]])
      st.markdown("[Video: Dynamics of liquid films in microgravity](https://www.youtube.com/watch?v=qTCwmUuM-Gg)")
      st.markdown("[Video: Approximating Steam Properties with a Neural Network](https://www.youtube.com/watch?v=xngHOVYZ1ak)")
-elif selection == "Entrepreneurial Activity
+elif selection == "Entrepreneurial Activity":
      st.title("Aneet Narendranath's Entrepreneurial Activity Dashboard")
      st.write("In January 2021, I co-founded Voxel Science LLC.  A Michigan based technology startup focused on simulation sandboxes with real time interactivity.")
      st.write("In March 2021 Voxel Science LLC received a technology grant from Wolfram Research Inc.")
