@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
-#from PIL import Image
+from PIL import Image
 #from tabulate import tabulate
 
 st.set_page_config(
