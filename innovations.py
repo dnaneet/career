@@ -29,7 +29,7 @@ df_evals = df_evals.assign(hack='').set_index('hack')
 #feedingimg = Image.open("feeding-habits.png")
 #harppiimg = Image.open("harppi.png")
 
-selection = st.sidebar.radio('Select ', ["Career Highlights", "Teaching", "Research", "Entrepreneurial Activity "Extra-Curricular Activities with intellectual value"])
+selection = st.sidebar.radio('Select ', ["Career Highlights", "Teaching", "Research", "Entrepreneurial Activity", "Extra-Curricular Activities with intellectual value"])
 st.sidebar.markdown("---")
 st.sidebar.write("This interactive page fully created in Python showcases my teaching experience, innovations, nomination for teaching awards, research output, entrepreneurial efforts, and extra-curricular activities.")
 st.sidebar.markdown("Aneet Narendranath (C) 2021")
