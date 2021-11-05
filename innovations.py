@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
-from PIL import Image
+#from PIL import Image
 #from tabulate import tabulate
 
 st.set_page_config(
@@ -23,11 +23,11 @@ df_evals = pd.read_csv('TeachingEvals.csv')
 df_evals[["Eval Score out of 5.0"]] = df_evals[["Eval Score out of 5.0"]]
 df_evals = df_evals.assign(hack='').set_index('hack')
 
-im = Image.open("career-progression.png")
-piimg = Image.open("pi.jpg")
-loginimg = Image.open("log-in.png")
-feedingimg = Image.open("feeding-habits.png")
-harppiimg = Image.open("harppi.png")
+#im = Image.open("career-progression.png")
+#piimg = Image.open("pi.jpg")
+#loginimg = Image.open("log-in.png")
+#feedingimg = Image.open("feeding-habits.png")
+#harppiimg = Image.open("harppi.png")
 
 selection = st.sidebar.radio('Select ', ["Highlights", "Teaching", "Research", "Entrepreneurial", "ExtraCurricular"])
 st.sidebar.markdown("---")
@@ -205,7 +205,7 @@ elif selection == "Teaching":
 elif selection == "Research":
      st.title("Aneet Narendranath's Research Output Dashboard")
      st.write("Computing and numerical solutions are the pillars of my research career.  I have research experience spanning multiple length and time-scales as described in this map of my activities.")
-     st.image(im, use_column_width="always")
+     #st.image(im, use_column_width="always")
      st.title("Aneet Narendranath's Research Output Dashboard")
      #st.write("In the years 2016 and 2019 my presentation at the Wolfram technology conference were recorded as media and published online.")
      #st.write("My research focus has been on numerical methods for nonlinear problems in technology and quantitative methods in assessment in STEM.")
@@ -227,16 +227,16 @@ elif selection == "Entrepreneurial":
 elif selection == "ExtraCurricular":
      st.title("Aneet Narendranath's Extra-Curricular activities")	
      st.subheader("A Raspberry-Pi learning center usage tracker")
-     st.image(piimg, use_column_width="always")
-     st.image(loginimg, use_column_width="always")
+     #st.image(piimg, use_column_width="always")
+     #st.image(loginimg, use_column_width="always")
      st.write("I wrote a bash-script that tracked the usage of a peer-supported engineering tutoring center (learning center).  This was created for a cost of approximately $100 and replaced a system that cost several thousand-dollars a year.")
      st.write("The Mag-Pi interviewed me about this initiative.  This interview may be found via [Mag-Pi Number 65](https://www.raspberrypi.org/magpi-issues/MagPi65.pdf).")
      st.subheader("Tracking the seasonal temperature and humidity variations around a Lyon and Healy Harp")
      st.write("I created a Python script that was deployed on a Raspberry Pi mounted with a Pi-Hat.  The hardware mounting and soldering was performed by my spouse who is a professional harpist.  The objective of this widget was to track the temperature and relative-humidity around an expensive Lyon and Healy harp.  Sadly, this project is defunct now as I have not had the time to invest in changing the web-hosting nuances.  However, we continue to collect data using this widget and have accummulated temperature and relative-humidity data, at 5 minute intervals for 4 consecutive years!")
-     st.image(harppiimg, use_column_width='always')
+     #st.image(harppiimg, use_column_width='always')
      st.subheader("Python code to visualize feeding habits of my cat")
      st.write("In summer 2021, my cat was stricken by a severe case of IBD possibly due to intestinal lymphoma.  It was imperative that I tracked the feeding habits, patterns and quality of life of my cat so as to prolong her life through focused medical support.  I have been collecting data (manually for now) on various parameters of my cat's feeding habits and her response to an oral steroid.  We discovered that the oral steroid activates her appetite approximately 50% better than without it.  An additional discovery of a dramatic change in her feeding habits was discovered.  Pre-2021, my cat was feeding on 1-oz of solid food in the day time and 1-oz in the night.  In 2021, her feeding habits have changed to her being a trickle-feeder.  She now ingests 4-6 meals, each of 0.2 to 0.3-oz of food. My cat's veterinarian informs me that never has such a detail on a cat's feeding been captured in literature.  When time permits, I plan on scaling my effort to an open-source app with the permission and collaboration of our veterinarian.")    
-     st.image(feedingimg, use_column_width='always')
+    # st.image(feedingimg, use_column_width='always')
 
 
 col1, col2, col3 = st.columns(3)
