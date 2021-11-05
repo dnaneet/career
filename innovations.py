@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 #from tabulate import tabulate
 
 st.set_page_config(
-     page_title='Aneet Narendranath\'s Academic Experience and Achievements Dashboard'
+     page_title='Aneet Narendranath\'s Dashboard of Career Achievements and Intellectual Products'
      #layout="wide"
 )
 
