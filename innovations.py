@@ -29,14 +29,14 @@ df_evals = df_evals.assign(hack='').set_index('hack')
 #feedingimg = Image.open("feeding-habits.png")
 #harppiimg = Image.open("harppi.png")
 
-selection = st.sidebar.radio('Select ', ["Highlights", "Teaching", "Research", "Entrepreneurial", "Extra-Curricular Activities with intellectual value"])
+selection = st.sidebar.radio('Select ', ["Career Highlights", "Teaching", "Research", "Entrepreneurial Activity "Extra-Curricular Activities with intellectual value"])
 st.sidebar.markdown("---")
 st.sidebar.write("This interactive page fully created in Python showcases my teaching experience, innovations, nomination for teaching awards, research output, entrepreneurial efforts, and extra-curricular activities.")
 st.sidebar.markdown("Aneet Narendranath (C) 2021")
 st.sidebar.markdown("---")
 
 
-if selection == "Highlights":
+if selection == "Career Highlights":
      st.title("Highlights of my Teaching, Research, Equity and Entrepreneurship")
      st.write("This page captures the highlights of my efforts since 2013 at Michigan Technological University.  Please visit in-depth pages on teaching, research and entrepreneurship by accessing the radio-buttons in the collapsible sidebar to the left.")
      st.markdown("## 🧑‍🏫 Cross-curricular Teaching with focus on collaborative problem solving studios")
@@ -218,7 +218,7 @@ elif selection == "Research":
      st.table(df_research[df_research['Year']==select_year][["Authors", "Year", "Title", "Publication", "Media"]])
      st.markdown("[Video: Dynamics of liquid films in microgravity](https://www.youtube.com/watch?v=qTCwmUuM-Gg)")
      st.markdown("[Video: Approximating Steam Properties with a Neural Network](https://www.youtube.com/watch?v=xngHOVYZ1ak)")
-elif selection == "Entrepreneurial":
+elif selection == "Entrepreneurial Activity
      st.title("Aneet Narendranath's Entrepreneurial Activity Dashboard")
      st.write("In January 2021, I co-founded Voxel Science LLC.  A Michigan based technology startup focused on simulation sandboxes with real time interactivity.")
      st.write("In March 2021 Voxel Science LLC received a technology grant from Wolfram Research Inc.")
