@@ -39,7 +39,7 @@ st.sidebar.markdown("---")
 if selection == "Career Highlights":
      st.title("Highlights of my Teaching, Research, Equity and Entrepreneurship")
      st.write("This page captures the highlights of my efforts since 2013 at Michigan Technological University.  Please visit in-depth pages on teaching, research and entrepreneurship by accessing the radio-buttons in the collapsible sidebar to the left.")
-     st.markdown("## 🧑‍🏫 Cross-curricular Teaching with focus on collaborative problem solving studios")
+     st.markdown("## 🧑‍🏫 Cross-curricular Teaching with focus on collaborative problem-solving studios")
      st.write("I teach 3-4 sections of courses, per semester, across the Mechanical engineering curriculum.  Since 2019, I have begun to shed a traditional classroom (inert lecturing) approach in favour of the inverted classroom, emphasis on 1-on-1 time, and collaborative design studios.")
      
      st.markdown("## :microscope: Multidisciplinary Research")
