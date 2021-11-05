@@ -6,3 +6,4 @@ dask
 matplotlib
 seaborn
 PIL
+image
