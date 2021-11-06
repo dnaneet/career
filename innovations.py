@@ -28,6 +28,7 @@ piimg = Image.open("pi.jpg")
 loginimg = Image.open("log-in.png")
 feedingimg = Image.open("feeding-habits.png")
 harppiimg = Image.open("harppi.png")
+entimg = Image.open("ent-stages.png")
 
 selection = st.sidebar.radio('Select ', ["Career Highlights", "Teaching", "Research", "Entrepreneurial Activity", "Extra-Curricular Activities with intellectual value"])
 st.sidebar.markdown("---")
@@ -220,8 +221,10 @@ elif selection == "Research":
      st.markdown("[Video: Approximating Steam Properties with a Neural Network](https://www.youtube.com/watch?v=xngHOVYZ1ak)")
 elif selection == "Entrepreneurial Activity":
      st.title("Aneet Narendranath's Entrepreneurial Activity Dashboard")
-     st.write("In January 2021, I co-founded Voxel Science LLC.  A Michigan based technology startup focused on simulation sandboxes with real time interactivity.")
-     st.write("In March 2021 Voxel Science LLC received a technology grant from Wolfram Research Inc.")
+     st.markdown("In January 2021, I co-founded Voxel Science LLC.  A Michigan based technology startup focused on simulation sandboxes with real time interactivity.  In March 2021 Voxel Science LLC received a [start-up technology grant](https://www.wolfram.com/startups/) from Wolfram Research Inc.  The stages of our evolution are described in the image below.  There exists an internal feedback loop between the 'Validate' and 'Demonstrate' stage.")
+     st.write("")
+     st.markdown("  ")
+     st.image(entimg, use_column_width="always")
      st.markdown("---")
      st.write("Due to potential IP, descriptions of our digital products are not immediately available for public perusal.")
 elif selection == "Extra-Curricular Activities with intellectual value":
@@ -231,12 +234,28 @@ elif selection == "Extra-Curricular Activities with intellectual value":
      st.image(loginimg, use_column_width="always")
      st.markdown("I wrote a [bash-script](https://github.com/dnaneet/learning-center-management) that ran on a [Raspberry Pi Zero](https://raw.githubusercontent.com/dnaneet/career/main/pi.jpg) and tracked the usage of a peer-supported engineering tutoring center (learning center).  This was created for a cost of approximately $100 and replaced a system that cost several thousand-dollars a year.")
      st.write("The Mag-Pi interviewed me about this initiative.  This interview may be found via [Mag-Pi Number 65](https://www.raspberrypi.org/magpi-issues/MagPi65.pdf).")
+     st.markdown("#### Intellectual value")
+     st.write("This project kick-started a focus on data driven decision making for a peer-supported learning center.  It recently catalyzed my data-driven solutions to salary inequity experienced by my student employees.")
+     st.markdown("----")
      st.subheader("🎵 Tracking the seasonal temperature and humidity variations around a Lyon and Healy Harp")
      st.markdown("I created a Python script that was deployed on a Raspberry Pi mounted with a Pi-Hat.  The hardware mounting and soldering was performed by my spouse who is a professional harpist.  The objective of this widget was to track the temperature and relative-humidity in the immediate vicinity of an expensive [Lyon and Healy harp](https://raw.githubusercontent.com/dnaneet/career/main/harppi.png).  Sadly, the live data-visualization component of this project is defunct due to a change in GitHub's hosting policies.  However, we continue to collect data using this widget and have accummulated temperature and relative-humidity data, at 5 minute intervals for 4 consecutive years!")
      st.image(harppiimg, use_column_width='always')
+     st.markdown("#### Intellectual value")
+     st.write("Harps are expensive musical instruments and require specialized care that we do not have access to.  Collecting 'comfort' data for my spouse's harp has allowed us to optimally deploy humidifiers and dehumidifiers to protect the structural integrity of the instrument.  Emergency round-trips to Lyon and Healy in Chicago, may have been averted by our approach.")
+     st.markdown("----")
      st.subheader("🐈 Data-drive assistance for the treatment of my cat's ailment")
-     st.markdown("In summer 2021, my cat was stricken by a severe case of IBD possibly due to Intestinal Lymphoma.  It was imperative that I tracked the feeding habits, patterns and quality of life of my cat so as to prolong her life through focused medical support.  I have been collecting data (manually for now) on various parameters of my cat's feeding habits and her response to an oral steroid.  We discovered that the oral steroid activates her appetite approximately 50% better than without it.  An additional discovery of a dramatic change in her feeding habits was discovered.  Pre-2021, my cat was feeding on 1-oz of solid food in the day time and 1-oz in the night.  In 2021, her feeding habits have changed to her being a trickle-feeder.  She now ingests 4-6 meals, each of 0.2 to 0.3-oz of food. My cat's veterinarian informs me that never has such a detail on a cat's feeding been captured in literature.  A sample of the visualization of my cat's feeding habits may be found via [this link](https://raw.githubusercontent.com/dnaneet/career/main/feeding-habits.png).  When time permits, I plan on scaling my effort to an open-source app in collaboration with our veterinarian.")    
+     st.markdown("In summer 2021, my cat was stricken by a severe case of IBD possibly due to Intestinal Lymphoma.  It was imperative that I tracked the feeding habits, patterns and quality of life of my cat so as to prolong her life through focused medical support.  I have been collecting data (manually for now) on various parameters of my cat's feeding habits and her response to an oral steroid.")  
+     """
+     ### Through visual analysis of the collected data, I made the following non-medical observations to help support the veterinarian
+     Unordered List:
+     - The oral steroid activates her appetite approximately 50% better than without it.  This is as expected by the veterinarian.
+     - A dramatic change in her feeding habits has occurred. She moved from eating larger volumes (1-oz of solid food) per feeding to trickle feeding through the day.   
+     - Although the volume of 'Nutrisource' brand of cat food consumed by my cat is greater than 'Taste of the Wild', her daily caloric intake has not changed between these two brands.  'Nutrisource' is less calorie-dense as compared to 'Taste of the Wild.'
+     """
+     st.markdown("#### Intellectual value")
+     st.write("My cat's veterinarian informs me that never has such a detail on a cat's feeding been captured in literature.  A sample of the visualization of my cat's feeding habits may be found via [this link](https://raw.githubusercontent.com/dnaneet/career/main/feeding-habits.png).  When time permits, I plan on scaling my effort to an open-source app in collaboration with our veterinarian.")
      st.image(feedingimg, use_column_width='always')
+     st.write("Although I have invested time and energy in collecting data on my cat's feeding behaviors, she is not a science project!  She is a valued member of my family to whom I owe a long and healthy life.")
 
 
 col1, col2, col3 = st.columns(3)
