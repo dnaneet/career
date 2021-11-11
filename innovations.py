@@ -46,7 +46,7 @@ if selection == "Career Highlights":
      st.markdown("## :microscope: Multidisciplinary Research")
      st.write("I am research-active non tenure-track faculty.  I publish 1-2 peer-reviewed papers in education research and on fundamental scientific researh in peer-reviewed national and international conferences and journals.  My current focus is Quantitative Learning Analytics and I am actively working on numerical models and machine learning tools to support systematic design of instruction, assessment data pipelines, and forecast models of student performance.")
 
-     st.markdown("## :chart_with_upwards_trend: Data-driven staffing at the Engineering Learning Center")
+     st.markdown("## :chart_with_upwards_trend: Data-driven staffing to ensure salary equity at the Engineering Learning Center")
      st.write("I currently manage a peer-tutoring center (Engineering Learning Center) in our Mechanical engineering department.  In fall 2021, through the application of usage data gathered over the last 3 years and the Srum project management framework, I am restoring equity in salaries for our tutors while ensuring that their short-term academic and career-oriented goals are met.  The ELC coaches were paid 30-40% less than their peers at other learning centers and teaching assistants while shouldering similar responsibilities.")
 
      st.markdown("## :sparkles: Entrepreneurial work")
