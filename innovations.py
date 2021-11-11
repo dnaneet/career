@@ -30,7 +30,7 @@ feedingimg = Image.open("feeding-habits.png")
 harppiimg = Image.open("harppi.png")
 entimg = Image.open("ent-stages.png")
 
-selection = st.sidebar.radio('Select ', ["Career Highlights", "Teaching", "Research", "Entrepreneurial Activity", "Extra-Curricular Activities with intellectual value"])
+selection = st.sidebar.radio('Select ', ["Career Highlights", "Teaching and associated media samples", "Research and associated media samples", "Entrepreneurial Activity", "Extra-Curricular Activities with intellectual value"])
 st.sidebar.markdown("---")
 st.sidebar.write("This interactive page fully created in Python showcases my teaching experience, innovations, nomination for teaching awards, research output, entrepreneurial efforts, and extra-curricular activities.")
 st.sidebar.markdown("Aneet Narendranath (C) 2021")
@@ -51,7 +51,7 @@ if selection == "Career Highlights":
 
      st.markdown("## :sparkles: Entrepreneurial work")
      st.write("In January 2021, I co-founded a tech startup with a focus on simulation sandboxes.  We were awarded a technology grant by Wolfram Research Inc.  We are currently purusing seed grants to build the scope of our technology.  In fall 2021, we engaged with a Senior Capstone Design course to supporting a *Digital Engineering* project at a mid-western university in North America.  We are currently in conversations to set-up a short-term *pop-up simulation environment studio* with another university.")
-elif selection == "Teaching":
+elif selection == "Teaching and associated media samples":
      st.title("Aneet Narendranath's Teaching Experience Dashboard")
      st.markdown('### 📺 Media samples of my instructional videos')
      st.markdown('These two media samples were created in summer 2021 towards a Computational thinking starter-pack for the Mechanical Engineering course on Mechanics of Materials.  These videos were shot by Lake Superior.  The location was chosen so as to remove the notion that instruction focused on computing should always have a computer screen as the focal point.')
@@ -204,7 +204,11 @@ elif selection == "Teaching":
                st.write("This is an undergraduate course in Strength of Materials.  Starting fall 2021, a cloud computing component will be (has been) introduced in this course.")  
           elif c == "Statics":
                st.write("This is an undergraduate course in Static force balances.")                     
-elif selection == "Research":
+elif selection == "Research and associated media samples":
+     st.markdown('### :tv: Media from public speaking at the Wolfram Technology conference')
+     st.markdown('The two media files linked below are my live-code notebook demonstration sessions captured at the Wolfram Technology conference in 2016 and 2019 respectively.  These videos are on two different topics: one on classical fluid dynamics and simulations and the other on cutting-edge Machine Learning as a replacement for Thermodynamic Steam Tables.  These have spawned multiple papers and presentations.')
+     st.markdown("[Video: Dynamics of liquid films in microgravity](https://www.youtube.com/watch?v=qTCwmUuM-Gg)")
+     st.markdown("[Video: Approximating Steam Properties with a Neural Network](https://www.youtube.com/watch?v=xngHOVYZ1ak)")
      st.title("Aneet Narendranath's Research Output Dashboard")
      st.markdown("Computing and numerical solutions are the pillars of my research career.  I have research experience spanning multiple length and time-scales as described in [this map](https://raw.githubusercontent.com/dnaneet/career/main/career-progression.png) of my activities.")
      st.image(im, use_column_width="always")
@@ -217,9 +221,7 @@ elif selection == "Research":
      years_research = np.unique(df_research[["Year"]])
      select_year = st.selectbox('Select year', years_research)
      #st.table(df_research[["Authors", "Year", "Title", "Publication", "Media"]].sort_values(by = ["Year"], ascending = False))
-     st.table(df_research[df_research['Year']==select_year][["Authors", "Year", "Title", "Publication", "Media"]])
-     st.markdown("[Video: Dynamics of liquid films in microgravity](https://www.youtube.com/watch?v=qTCwmUuM-Gg)")
-     st.markdown("[Video: Approximating Steam Properties with a Neural Network](https://www.youtube.com/watch?v=xngHOVYZ1ak)")
+     st.table(df_research[df_research['Year']==select_year][["Authors", "Year", "Title", "Publication", "Media"]])     
 elif selection == "Entrepreneurial Activity":
      st.title("Aneet Narendranath's Entrepreneurial Activity Dashboard")
      st.markdown("In January 2021, I co-founded Voxel Science LLC.  A Michigan based technology startup focused on simulation sandboxes with real time interactivity.  In March 2021 Voxel Science LLC received a [start-up technology grant](https://www.wolfram.com/startups/) from Wolfram Research Inc.  The stages of our evolution are described in the image below.  There exists an internal feedback loop between the 'Validate' and 'Demonstrate' stage.")
