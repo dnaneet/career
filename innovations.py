@@ -9,7 +9,7 @@ from PIL import Image
 #from tabulate import tabulate
 
 st.set_page_config(
-     page_title='Aneet Narendranath\'s Dashboard of Career Achievements and Intellectual Products'
+     page_title='Aneet Narendranath\'s Dashboard of Career Accomplishments and Intellectual Products'
      #layout="wide"
 )
 
