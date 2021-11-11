@@ -53,6 +53,10 @@ if selection == "Career Highlights":
      st.write("In January 2021, I co-founded a tech startup with a focus on simulation sandboxes.  We were awarded a technology grant by Wolfram Research Inc.  We are currently purusing seed grants to build the scope of our technology.  In fall 2021, we engaged with a Senior Capstone Design course to supporting a *Digital Engineering* project at a mid-western university in North America.  We are currently in conversations to set-up a short-term *pop-up simulation environment studio* with another university.")
 elif selection == "Teaching":
      st.title("Aneet Narendranath's Teaching Experience Dashboard")
+     st.markdown('### 📺 Media samples of my instructional videos')
+     st.markdown('These two media samples were created in summer 2021 towards a Computational thinking starter-pack for the Mechanical Engineering course on Mechanics of Materials.  These videos were shot by Lake Superior.  The location was chosen so as to remove the notion that instruction focused on computing should always have a computer screen as the focal point.')
+     st.markdown('[Video: 2 minute vignette on the Convergence, Iteration with help from my GTA (Graduate Tabby Assistant)](https://youtu.be/VZeUe9ZjWb8)')
+     st.markdown('[Video: 45 second vignette on the importance of computational thinking](https://youtu.be/y0EJsWmNvFU)')
      #st.dataframe(df_evals)
      st.markdown("## :bar_chart: All Teaching Evaluation Scores")
      st.write('My teaching evaluation compound scores may be interactively visualized via this chart.')
@@ -173,11 +177,7 @@ elif selection == "Teaching":
      #             align='left'))
      # ])
      # #fig2.update_layout(width=500, height=300)
-     # st.plotly_chart(fig2)
-     st.markdown('### 📺 Media samples of my instructional videos')
-     st.markdown('These two media samples were created in summer 2021 towards a ``Computational thinking starter-pack'' for the Mechanical Engineering course on Mechanics of Materials.  These ``lecture'' videos were shot by Lake Superior.  The location was chosen so as to remove the notion that instruction focused on computing should always have a computer screen as the focal point. ')
-     st.markdown('[Video: 2 minute vignette on the Convergence, Iteration with help from my GTA (Graduate Tabby Assistant)](https://youtu.be/VZeUe9ZjWb8)')
-     st.markdown('[Video: 45 second vignette on the importance of computational thinking](https://youtu.be/y0EJsWmNvFU)')      
+     # st.plotly_chart(fig2)      
      st.markdown("### :information_source: Course descriptions")
      expand = st.expander(label='Expand me for course descriptions')
      with expand:
