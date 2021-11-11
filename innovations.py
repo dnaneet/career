@@ -174,7 +174,10 @@ elif selection == "Teaching":
      # ])
      # #fig2.update_layout(width=500, height=300)
      # st.plotly_chart(fig2)
-
+     st.markdown('### 📺 Media samples of my instructional videos')
+     st.markdown('These two media samples were created in summer 2021 towards a ``Computational thinking starter-pack'' for the Mechanical Engineering course on Mechanics of Materials.  These ``lecture'' videos were shot by Lake Superior.  The location was chosen so as to remove the notion that instruction focused on computing should always have a computer screen as the focal point. ')
+     st.markdown('[Video: 2 minute vignette on the Convergence, Iteration with help from my GTA (Graduate Tabby Assistant)](https://youtu.be/VZeUe9ZjWb8)')
+     st.markdown('[Video: 45 second vignette on the importance of computational thinking](https://youtu.be/y0EJsWmNvFU)')      
      st.markdown("### :information_source: Course descriptions")
      expand = st.expander(label='Expand me for course descriptions')
      with expand:
@@ -200,9 +203,7 @@ elif selection == "Teaching":
           elif c == "Mechanics of Materials":
                st.write("This is an undergraduate course in Strength of Materials.  Starting fall 2021, a cloud computing component will be (has been) introduced in this course.")  
           elif c == "Statics":
-               st.write("This is an undergraduate course in Static force balances.")   
-     st.markdown('[Video: 2 minute vignette on the Convergence, Iteration with help from my GTA (Graduate Tabby Assistant)](https://youtu.be/VZeUe9ZjWb8)')
-     st.markdown('[Video: 45 second vignette on the importance of computational thinking](https://youtu.be/y0EJsWmNvFU)')                   
+               st.write("This is an undergraduate course in Static force balances.")                     
 elif selection == "Research":
      st.title("Aneet Narendranath's Research Output Dashboard")
      st.markdown("Computing and numerical solutions are the pillars of my research career.  I have research experience spanning multiple length and time-scales as described in [this map](https://raw.githubusercontent.com/dnaneet/career/main/career-progression.png) of my activities.")
