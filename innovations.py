@@ -205,11 +205,11 @@ elif selection == "Teaching and associated media samples":
           elif c == "Statics":
                st.write("This is an undergraduate course in Static force balances.")                     
 elif selection == "Research and associated media samples":
+     st.title("Aneet Narendranath's Research Output Dashboard")
      st.markdown('### :tv: Media from public speaking at the Wolfram Technology conference')
      st.markdown('The two media files linked below are my live-code notebook demonstration sessions captured at the Wolfram Technology conference in 2016 and 2019 respectively.  These videos are on two different topics: one on classical fluid dynamics and simulations and the other on cutting-edge Machine Learning as a replacement for Thermodynamic Steam Tables.  These have spawned multiple papers and presentations.')
      st.markdown("[Video: Dynamics of liquid films in microgravity](https://www.youtube.com/watch?v=qTCwmUuM-Gg)")
-     st.markdown("[Video: Approximating Steam Properties with a Neural Network](https://www.youtube.com/watch?v=xngHOVYZ1ak)")
-     st.title("Aneet Narendranath's Research Output Dashboard")
+     st.markdown("[Video: Approximating Steam Properties with a Neural Network](https://www.youtube.com/watch?v=xngHOVYZ1ak)")     
      st.markdown("Computing and numerical solutions are the pillars of my research career.  I have research experience spanning multiple length and time-scales as described in [this map](https://raw.githubusercontent.com/dnaneet/career/main/career-progression.png) of my activities.")
      st.image(im, use_column_width="always")
      st.title("Aneet Narendranath's Research Output Dashboard")
