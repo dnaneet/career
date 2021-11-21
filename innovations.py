@@ -30,10 +30,11 @@ feedingimg = Image.open("feeding-habits.png")
 harppiimg = Image.open("harppi.png")
 entimg = Image.open("ent-stages.png")
 
-selection = st.sidebar.radio('Select ', ["Career Highlights", "Teaching and associated media samples", "Research and associated media samples", "Entrepreneurial Activity", "Extra-Curricular Activities with intellectual value"])
+selection = st.sidebar.radio('Select ', ["Career Highlights", "Teaching and associated media samples", "Research Output and associated media samples", "Entrepreneurial Activity", "Extra-Curricular Activities with intellectual value"])
 st.sidebar.markdown("---")
-st.sidebar.write("This interactive page fully created in Python showcases my teaching experience, innovations, nomination for teaching awards, research output, entrepreneurial efforts, and extra-curricular activities.")
-st.sidebar.markdown("Aneet Narendranath (C) 2021")
+st.sidebar.write("This web-app showcases my teaching experience, innovations, nomination for teaching awards, research output, entrepreneurial efforts, and extra-curricular activities.")
+st.sidebar.markdown("###### Created in Python with Streamlit.")
+st.sidebar.markdown("###### Aneet Narendranath (C) 2021")
 st.sidebar.markdown("---")
 
 
@@ -204,7 +205,7 @@ elif selection == "Teaching and associated media samples":
                st.write("This is an undergraduate course in Strength of Materials.  Starting fall 2021, a cloud computing component will be (has been) introduced in this course.")  
           elif c == "Statics":
                st.write("This is an undergraduate course in Static force balances.")                     
-elif selection == "Research and associated media samples":
+elif selection == "Research Output and associated media samples":
      st.title("Aneet Narendranath's Research Output Dashboard")
      st.markdown('### :tv: Media from public speaking at the Wolfram Technology conference')
      st.markdown('The two media files linked below are my live-code notebook demonstration sessions captured at the Wolfram Technology conference in 2016 and 2019 respectively.  These videos are on two different topics: one on classical fluid dynamics and simulations and the other on cutting-edge Machine Learning as a replacement for Thermodynamic Steam Tables.  These have spawned multiple papers and presentations.')
@@ -221,7 +222,44 @@ elif selection == "Research and associated media samples":
      years_research = np.unique(df_research[["Year"]])
      select_year = st.selectbox('Select year', years_research)
      #st.table(df_research[["Authors", "Year", "Title", "Publication", "Media"]].sort_values(by = ["Year"], ascending = False))
-     st.table(df_research[df_research['Year']==select_year][["Authors", "Year", "Title", "Publication", "Media"]])     
+     st.table(df_research[df_research['Year']==select_year][["Authors", "Year", "Title", "Publication", "Media"]])
+     expand_proposals = st.expander(label='Expand me for a list of internal grants received and external proposals co-authored.')
+
+     with expand_proposals:
+          st.markdown('###### Internal Grants Received as PI:')
+          st.markdown("I received internal grants for successful proposals that were reviewed by our external advisory board members.  The process was competitive.  The focus of my internal proposals has been Learning Analytics.")
+          """
+           - MEEM [External Advisory Board](https://www.mtu.edu/mechanical/people/advisory-board/) of corporate members fund: Assessment and Learning Analytics Dashboard for deployment in the Mechanical Engineering curriculum at Michigan Tech, September 2021.
+           - MEEM EAB fund: Machine learning applied to student simulations to discover computation thinking attributes, September 2019.
+           - [Summer undergraduate research fellowship](https://www.mtu.edu/honors/research/surf/): Reducing hull drag in conventional watercraft through an induced cavitation field.
+           """
+          st.markdown("###### External Proposals co-authored (Spronsored Programs) as co-PI")
+          st.markdown("My primary responsibility was numerical simulations and creation of algorithms for active control of hydrodynamic instabilities, in these proposals.")
+          """
+            - NSF Collaborative Research: Heat transfer and convective structure evolution in transient, evaporating thin films, 2021. 
+            - NSF Collaborative Research: Interfacial Instability and Convective Structure Evolution in Evaporating Films, 2019.
+            - NSF Collaborative Research: Instability  Convective Structure and Heat Transfer in Evaporating Films in Microgravity, 2018.
+            - NSF Collaborative Research: Interfacial Stability and Evolution of Convective Structure in Evaporating Films under Non-Stationary Conditions, 2017.
+          """
+
+     
+     expand_student_advising = st.expander(label='Expand me for student advising activity.')
+     with expand_student_advising:
+          st.markdown("###### Fall 2021 and Spring 2022")
+          st.markdown("I am currently advising an undergraduate student on a year long project on developing **Key Performance Indicators** for a Scrum-framework supported peer-learning tutoring center. The outcome of this project is an empirical identification of the dependent and independent variables in a peer-driven learning/teaching process.")  
+
+          st.markdown("###### Summer 2021")
+          st.markdown("I advised a graduate student on a short term research project with a focus on creating a **cloud-deployed Learning Analytics dashboard**.  This project was 15 hours in duration and used Scrum to incrementally develop a Learning Analytics forecast tool dashboard-solution that can be cloud deployed. The student is currently enrolled in the graduate school at Michigan Technological University and is pursuing a PhD in Combustion Science. The following research output was produced from this endeavour:")
+          """
+           - S. Gopujkar, A.D. Narendranath, "Building a Suite of Learning Analytics Tools for STEM Education" (Live Learning Analytics code demonstration), *Future of Education* Track at the Wolfram Technology Conference 2021 (October 6--12, 2021)
+          """
+
+          st.markdown("###### Summer 2020")
+          st.markdown("I advised an undergraduate student in a successful [summer undergraduate research fellowship](https://www.mtu.edu/honors/research/surf/) on a **Scientific Machine Learning model for the control of drag on watercraft**.  The student is currently enrolled as a graduate student at Purdue university and is pursuing a Master's degree. The following research output was produced from this endeavour:")
+          """
+           - C.Grande, A.D. Narendranath, "Reducing Hull Drag in Conventional Watercraft through an Induced Cavitation Field: A Numerical/Predictive Approach", ASME IMECE 2020 Poster.
+          """
+
 elif selection == "Entrepreneurial Activity":
      st.title("Aneet Narendranath's Entrepreneurial Activity Dashboard")
      st.markdown("In January 2021, I co-founded Voxel Science LLC.  A Michigan based technology startup focused on simulation sandboxes with real time interactivity.  In March 2021 Voxel Science LLC received a [start-up technology grant](https://www.wolfram.com/startups/) from Wolfram Research Inc.  The stages of our evolution are described in the image below.  There exists an internal feedback loop between the 'Validate' and 'Demonstrate' stage.")
