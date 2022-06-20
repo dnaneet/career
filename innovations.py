@@ -34,8 +34,7 @@ selection = st.sidebar.radio('Select ', ["Career Highlights", "Teaching and asso
 st.sidebar.markdown("---")
 st.sidebar.write("This web-app showcases my teaching experience, innovations, nomination for teaching awards, research output, entrepreneurial efforts, and extra-curricular activities.")
 st.sidebar.markdown("###### Created in Python with Streamlit.")
-st.sidebar.markdown("###### Aneet Narendranath (C) 2021")
-st.sidebar.markdown("###### Associate Teaching Professor")
+st.sidebar.markdown("###### Aneet Narendranath, PhD., Associate Teaching Professor")
 st.sidebar.markdown("---")
 
 
